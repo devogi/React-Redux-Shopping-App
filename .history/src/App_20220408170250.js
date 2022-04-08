@@ -7,17 +7,15 @@ import ProductDetail from "./containers/ProductDetail";
 function App() {
   return (
     <div className="App">
-      
-        <Router>
-          <Header />
-          <Routes>
-            <Route path="/" element={<ProductListing />} />
-            <Route path="/product/:productId" element={<ProductDetail />} />
-            <Route>404 Not Found!</Route>
-          </Routes>
-        </Router>
-     
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={ProductListing} />
+        <Route path="/product/:productId" component={ProductDetails} />
+        <Route>404 Not Found!</Route>
+      </Switch>
+    </Router>
+  </div>
   );
 }
 

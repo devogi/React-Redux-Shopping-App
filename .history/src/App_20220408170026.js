@@ -9,12 +9,13 @@ function App() {
     <div className="App">
       
         <Router>
-          <Header />
+          <Header>
           <Routes>
             <Route path="/" element={<ProductListing />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
             <Route>404 Not Found!</Route>
           </Routes>
+          </Header>
         </Router>
      
     </div>
